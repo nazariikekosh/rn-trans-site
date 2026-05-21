@@ -1,0 +1,14 @@
+/* ==========================================================================
+   ПІДВАЛ (FOOTER)
+   ========================================================================== */
+.site-footer { background-color: var(--logo-deep-blue); color: var(--white); padding: 50px 0; border-top: 3px solid var(--logo-light-blue); position: relative; z-index: 2; }
+.footer-container { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
+.footer-logo { font-size: 24px; font-weight: 800; display: block; margin-bottom: 10px; }
+.footer-logo span { color: var(--logo-light-blue); }
+.footer-left p { font-size: 13px; color: #cbd5e1; }
+.footer-right p { font-size: 13px; color: #cbd5e1; text-align: right; margin-bottom: 5px; }
+
+@media (max-width: 768px) {
+    .footer-container { flex-direction: column; text-align: center; }
+    .footer-right p { text-align: center; }
+}

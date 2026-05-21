@@ -1,0 +1,23 @@
+/* ==========================================================================
+   СЕКЦІЯ РЕКВІЗИТІВ (REQUISITES SECTION)
+   ========================================================================== */
+.requisites-section { padding: 100px 0; background-color: var(--light-gray); }
+.requisites-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; }
+.requisites-block { background-color: var(--white); padding: 35px; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+.requisites-block.full-width { grid-column: 1 / -1; }
+.requisites-block h3 {
+    font-size: 18px; color: var(--logo-electric); margin-bottom: 20px;
+    border-bottom: 2px solid var(--light-gray); padding-bottom: 10px;
+    display: flex; align-items: center; gap: 10px;
+}
+.req-table { width: 100%; border-collapse: collapse; }
+.req-table td { padding: 10px 0; border-bottom: 1px solid #edf2f7; font-size: 14px; vertical-align: top; }
+.req-table td:first-child { width: 35%; color: var(--text-muted); font-weight: 500; }
+.req-table td:last-child { color: var(--text-main); }
+.iban-text {
+    font-family: monospace; font-size: 15px; font-weight: 700; letter-spacing: 0.5px;
+    background-color: #f7fafc; padding: 4px 8px; border-radius: 4px;
+    display: inline-block; word-break: break-all;
+}
+
+@media (max-width: 992px) { .requisites-wrapper { grid-template-columns: 1fr; } }

@@ -1,0 +1,35 @@
+/* ==========================================================================
+   ГОЛОВНИЙ ЕКРАН (HERO SECTION)
+   ========================================================================== */
+.hero-section {
+    position: relative; min-height: 100vh; display: flex; align-items: center;
+    background-repeat: no-repeat; background-position: center center;
+    background-size: cover; padding-top: 80px; color: var(--white);
+}
+.hero-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(11,29,51,0.95) 35%, rgba(26,98,179,0.3) 80%);
+    z-index: 1;
+}
+.hero-container { position: relative; z-index: 2; }
+.hero-badge {
+    display: inline-block; background-color: rgba(58,139,233,0.15);
+    border: 1px solid rgba(58,139,233,0.3); color: var(--logo-light-blue);
+    padding: 6px 16px; border-radius: 30px; font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px;
+}
+.hero-title { font-size: 48px; font-weight: 900; line-height: 1.15; margin-bottom: 25px; text-transform: uppercase; }
+.hero-title span { color: var(--logo-light-blue); }
+.hero-description { font-size: 17px; color: #e2e8f0; margin-bottom: 40px; max-width: 750px; }
+.hero-actions { display: flex; gap: 20px; }
+
+@media (max-width: 992px) {
+    .hero-section { flex-direction: column; justify-content: center; align-items: center; padding-top: 160px; padding-bottom: 50px; }
+    .hero-title { font-size: 32px; }
+}
+@media (max-width: 576px) {
+    .hero-content { flex-direction: column; display: flex; gap: 50px; }
+    .hero-title { font-size: 26px; }
+    .hero-description { font-size: 14px; }
+    .hero-actions { flex-direction: column; gap: 12px; }
+}

@@ -1,0 +1,16 @@
+/* ==========================================================================
+   СЕКЦІЯ КОНТАКТІВ (CONTACTS SECTION)
+   ========================================================================== */
+.contacts-section { padding: 100px 0; background-color: var(--white); }
+.contacts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.contact-card { background-color: var(--light-gray); padding: 40px 30px; border-radius: 6px; text-align: center; transition: var(--transition); }
+.contact-card.accent { background-color: var(--white); border: 2px solid var(--logo-electric); box-shadow: 0 10px 25px rgba(26,98,179,0.08); }
+.contact-avatar { font-size: 40px; color: var(--logo-electric); margin-bottom: 15px; }
+.contact-role { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--logo-light-blue); margin-bottom: 10px; }
+.contact-card h3 { font-size: 20px; color: var(--logo-deep-blue); margin-bottom: 10px; }
+.contact-card .desc { font-size: 14px; color: var(--text-muted); margin-bottom: 25px; min-height: 45px; }
+.contact-btn { display: block; background-color: var(--logo-electric); color: var(--white); text-decoration: none; font-weight: 700; padding: 12px; border-radius: 4px; transition: var(--transition); text-align: center; }
+.contact-btn:hover { background-color: var(--logo-light-blue); }
+.contact-link { display: block; color: var(--text-main); text-decoration: none; font-weight: 600; margin-bottom: 10px; font-size: 14px; transition: var(--transition); }
+.contact-link:hover { color: var(--logo-light-blue); }
+.contact-link i { color: var(--logo-electric); margin-right: 6px; }

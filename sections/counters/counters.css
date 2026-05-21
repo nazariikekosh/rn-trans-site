@@ -1,0 +1,9 @@
+/* ==========================================================================
+   БЛОК ЦИФР ТА ЛІЧИЛЬНИКІВ (COUNTERS SECTION)
+   ========================================================================== */
+.counters-section { padding: 80px 0; background-color: var(--logo-deep-blue); color: var(--white); }
+.counters-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+.counter-card { text-align: center; padding: 20px; }
+.counter-icon { font-size: 35px; color: var(--logo-light-blue); margin-bottom: 15px; }
+.counter-number-wrapper { font-size: 42px; font-weight: 800; line-height: 1; margin-bottom: 10px; font-family: var(--font-family); }
+.counter-desc { font-size: 14px; color: #cbd5e1; }

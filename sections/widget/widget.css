@@ -1,0 +1,54 @@
+/* ==========================================================================
+   ПЛАВАЮЧІ КНОПКИ (FLOATING WIDGET)
+   ========================================================================== */
+.floating-contact-widget {
+    position: fixed; bottom: 30px; right: 30px; z-index: 150;
+    display: flex; flex-direction: column; align-items: center; gap: 15px;
+}
+.widget-main-btn,
+.widget-calc-btn {
+    width: 60px; height: 60px; border-radius: 50%; border: none; font-size: 24px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    color: var(--white); transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative; text-decoration: none;
+}
+.widget-calc-btn { background-color: var(--logo-light-blue); box-shadow: 0 8px 25px rgba(58,139,233,0.4); z-index: 2; }
+.widget-calc-btn.pulse-animation::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 50%; background-color: var(--logo-light-blue);
+    opacity: 0.5; animation: calcPulse 2s infinite; z-index: -1;
+}
+@keyframes calcPulse { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(1.6); opacity: 0; } }
+.widget-tooltip {
+    position: absolute; right: 75px; background-color: var(--logo-deep-blue); color: var(--white);
+    padding: 6px 14px; border-radius: 4px; font-size: 13px; font-weight: 700; white-space: nowrap;
+    opacity: 0.85; pointer-events: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: var(--transition);
+}
+.widget-calc-btn:hover { background-color: var(--logo-electric); transform: translateY(-3px); }
+.widget-calc-btn:hover .widget-tooltip { opacity: 1; transform: translateX(-3px); }
+.widget-main-btn { background-color: var(--logo-deep-blue); box-shadow: 0 8px 25px rgba(11,29,51,0.3); z-index: 3; }
+.floating-contact-widget.active .widget-main-btn { transform: rotate(135deg); background-color: #f09433; }
+.widget-dropdown {
+    position: absolute; bottom: 75px; display: flex; flex-direction: column; gap: 10px;
+    opacity: 0; transform: translateY(20px); pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1;
+}
+.floating-contact-widget.active .widget-dropdown { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.widget-item {
+    width: 48px; height: 48px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--white); font-size: 20px; text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15); transition: var(--transition);
+}
+.widget-item.phone { background-color: #25D366; }
+.widget-item.viber { background-color: #7328F1; }
+.widget-item.telegram { background-color: #0088cc; }
+.widget-item:hover { transform: scale(1.15); }
+
+@media (max-width: 576px) {
+    .floating-contact-widget { bottom: 20px; right: 20px; gap: 10px; }
+    .widget-main-btn, .widget-calc-btn { width: 52px; height: 52px; font-size: 20px; }
+    .widget-dropdown { bottom: 65px; }
+    .widget-item { width: 44px; height: 44px; font-size: 18px; }
+    .widget-tooltip { right: 65px; font-size: 11px; padding: 4px 10px; }
+}

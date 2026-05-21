@@ -1,0 +1,70 @@
+/* ==========================================================================
+   ШАПКА САЙТУ (HEADER & NAVIGATION)
+   ========================================================================== */
+body.nav-open { overflow: hidden; }
+body.nav-open::after {
+    content: ''; position: fixed; top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 98; pointer-events: none; opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.site-header {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+    padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: linear-gradient(to bottom, rgba(11,29,51,0.95) 0%, rgba(11,29,51,0.8) 100%);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+}
+.header-container { display: flex; justify-content: space-between; align-items: center; }
+.logo-img { height: 65px; width: auto; display: block; }
+.logo-text-fallback { display: none; }
+
+.nav-list { display: flex; list-style: none; gap: 30px; }
+.nav-link {
+    color: var(--white); text-decoration: none; font-size: 14px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.5px; padding: 8px 0;
+    position: relative; transition: var(--transition);
+}
+.nav-link:hover { color: var(--logo-light-blue); }
+.nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: var(--logo-light-blue); transition: var(--transition); }
+.nav-link:hover::after { width: 100%; }
+
+.header-action { display: flex; align-items: center; gap: 20px; }
+.header-phone {
+    color: var(--white); text-decoration: none; font-weight: 700; font-size: 15px;
+    background-color: var(--logo-electric); padding: 10px 18px; border-radius: 4px;
+    display: flex; align-items: center; gap: 8px; transition: var(--transition);
+}
+.header-phone:hover { background-color: var(--logo-light-blue); box-shadow: 0 4px 15px rgba(58,139,233,0.4); }
+
+.header-socials { display: flex; gap: 8px; }
+.social-item {
+    color: var(--white); font-size: 16px; width: 36px; height: 36px;
+    background-color: rgba(255,255,255,0.1); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; transition: var(--transition);
+}
+.social-item:hover { transform: translateY(-2px); }
+.social-item.viber:hover { background-color: #7328F1; }
+.social-item.whatsapp:hover { background-color: #25D366; }
+
+.mobile-menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 5px; }
+.mobile-menu-toggle span { width: 25px; height: 3px; background-color: var(--white); border-radius: 2px; transition: var(--transition); }
+
+@media (max-width: 992px) {
+    .main-nav {
+        position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
+        background-color: var(--logo-deep-blue); z-index: 99;
+        padding: 100px 30px; transition: var(--transition);
+        box-shadow: -5px 0 25px rgba(0,0,0,0.2); overflow-y: auto;
+    }
+    .nav-list { flex-direction: column; gap: 25px; }
+    .nav-link { font-size: 16px; }
+    .mobile-menu-toggle { display: flex; z-index: 100; }
+    body.nav-open .main-nav { right: 0; }
+    body.nav-open .mobile-menu-toggle span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    body.nav-open .mobile-menu-toggle span:nth-child(2) { opacity: 0; }
+    body.nav-open .mobile-menu-toggle span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+@media (max-width: 768px) { .header-phone { display: none; } }

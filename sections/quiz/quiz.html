@@ -1,0 +1,45 @@
+<div id="quiz-modal" class="quiz-modal">
+  <div class="quiz-modal-content">
+    <button class="quiz-close-btn">&times;</button>
+    <div class="quiz-progress-bar"><div class="quiz-progress" id="quiz-progress"></div></div>
+    <form id="rn-quiz-form">
+      <div class="quiz-step active" data-step="1">
+        <h3>Крок 1: Оберіть тип автомобіля</h3>
+        <div class="quiz-options-grid">
+          <label class="quiz-option-card"><input type="radio" name="car_type" value="Седан" checked><div class="option-content"><i class="fas fa-car"></i><span>Седан / Хетчбек</span></div></label>
+          <label class="quiz-option-card"><input type="radio" name="car_type" value="Кросовер"><div class="option-content"><i class="fas fa-suv"></i><span>Кросовер / Джип</span></div></label>
+          <label class="quiz-option-card"><input type="radio" name="car_type" value="Бус"><div class="option-content"><i class="fas fa-shuttle-van"></i><span>Мікроавтобус / Бус</span></div></label>
+          <label class="quiz-option-card"><input type="radio" name="car_type" value="Електромобіль"><div class="option-content"><i class="fas fa-bolt"></i><span>Електромобіль</span></div></label>
+        </div>
+        <div class="quiz-navigation"><button type="button" class="btn btn-primary next-step-btn">Далі</button></div>
+      </div>
+      <div class="quiz-step" data-step="2">
+        <h3>Крок 2: Звідки потрібно везти авто?</h3>
+        <div class="quiz-options-grid">
+          <label class="quiz-option-card"><input type="radio" name="route_from" value="Німеччина" checked><div class="option-content">📍 <span>Німеччина</span></div></label>
+          <label class="quiz-option-card"><input type="radio" name="route_from" value="Польща"><div class="option-content">📍 <span>Польща</span></div></label>
+          <label class="quiz-option-card"><input type="radio" name="route_from" value="Литва/Латвія"><div class="option-content">📍 <span>Литва / Латвія</span></div></label>
+          <label class="quiz-option-card"><input type="radio" name="route_from" value="Інша країна Європи"><div class="option-content">🇪🇺 <span>Інша країна ЄС</span></div></label>
+        </div>
+        <div class="quiz-navigation">
+          <button type="button" class="btn btn-secondary prev-step-btn">Назад</button>
+          <button type="button" class="btn btn-primary next-step-btn">Далі</button>
+        </div>
+      </div>
+      <div class="quiz-step" data-step="3">
+        <h3>Крок 3: Куди надіслати точний розрахунок вартості?</h3>
+        <p style="text-align:center;color:var(--text-muted);font-size:14px;margin-bottom:20px;">Менеджер прорахує логістику та зв'яжеться з вами у вибраному месенджері.</p>
+        <div class="quiz-messenger-select">
+          <label class="messenger-radio"><input type="radio" name="preferred_messenger" value="Viber" checked><span class="m-box viber"><i class="fab fa-viber"></i> Viber</span></label>
+          <label class="messenger-radio"><input type="radio" name="preferred_messenger" value="Telegram"><span class="m-box telegram"><i class="fab fa-telegram-plane"></i> Telegram</span></label>
+          <label class="messenger-radio"><input type="radio" name="preferred_messenger" value="Дзвінок"><span class="m-box phone"><i class="fas fa-phone-alt"></i> Дзвінок</span></label>
+        </div>
+        <div class="quiz-input-wrapper"><input type="tel" name="client_phone" placeholder="+38 (0XX) XXX-XX-XX" required></div>
+        <div class="quiz-navigation">
+          <button type="button" class="btn btn-secondary prev-step-btn">Назад</button>
+          <button type="submit" class="btn btn-primary submit-quiz-btn">Отримати ціну</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

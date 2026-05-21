@@ -1,0 +1,23 @@
+/* ==========================================================================
+   СЕКЦІЯ ПЕРЕВАГ (ADVANTAGES SECTION)
+   ========================================================================== */
+.advantages-section {
+    padding: 100px 0;
+    background-color: var(--light-gray);
+    background-image: linear-gradient(rgba(244,246,249,0.93), rgba(244,246,249,0.93)), url('../../assets/images/world-map-vector.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.advantages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.advantage-card {
+    background-color: rgba(255,255,255,0.95); padding: 35px 30px; border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03); transition: var(--transition);
+    border-bottom: 3px solid transparent;
+}
+.advantage-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(11,29,51,0.08); border-bottom-color: var(--logo-light-blue); }
+.card-icon { font-size: 38px; color: var(--logo-electric); margin-bottom: 20px; }
+.advantage-card h3 { font-size: 19px; font-weight: 700; color: var(--logo-deep-blue); margin-bottom: 12px; }
+.advantage-card p { font-size: 14px; color: var(--text-muted); }
+
+@media (max-width: 992px) { .advantage-card { text-align: center; } }
